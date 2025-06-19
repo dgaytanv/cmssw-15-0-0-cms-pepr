@@ -25,3 +25,7 @@ python/
 *.bak
 *.swp
 *.tmp
+
+# Exclude these directories
+production_tests/
+reco_prodtools/
