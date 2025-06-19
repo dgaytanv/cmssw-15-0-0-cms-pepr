@@ -10,7 +10,7 @@ from SimGeneral.MixingModule.castorDigitizer_cfi import *
 from SimGeneral.MixingModule.pileupVtxDigitizer_cfi import *
 from SimGeneral.MixingModule.trackingTruthProducerSelection_cfi import *
 from SimGeneral.MixingModule.caloTruthProducer_cfi import *
-from SimGeneral.MixingModule.mtdTruthProducer_cfi import *
+#from SimGeneral.MixingModule.mtdTruthProducer_cfi import *
 from FastSimulation.Tracking.recoTrackAccumulator_cfi import *
 
 theDigitizers = cms.PSet(
@@ -86,7 +86,7 @@ from SimFastTiming.Configuration.SimFastTiming_cff import mtdDigitizer
 from Configuration.Eras.Modifier_phase2_timing_layer_cff import phase2_timing_layer
 phase2_timing_layer.toModify( theDigitizers,
                               fastTimingLayer = mtdDigitizer.clone(),
-                              MC_fastTimingLayer = mtdTruth.clone()
+                              #MC_fastTimingLayer = mtdTruth.clone()
 )
 
 premix_stage2.toModify(theDigitizers,
@@ -107,7 +107,7 @@ premix_stage2.toModify(theDigitizers,
         barrelDigitizer = dict(premixStage1 = True),
         endcapDigitizer = dict(premixStage1 = True)
     ),
-    MC_fastTimingLayer = dict(premixStage1 = True),
+    #MC_fastTimingLayer = dict(premixStage1 = True),
 )
 
 from Configuration.Eras.Modifier_phase2_tracker_cff import phase2_tracker

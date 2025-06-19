@@ -29,7 +29,7 @@
 #include <memory>
 #include <sstream>
 
-//#define EDM_ML_DEBUG
+#define EDM_ML_DEBUG
 
 CaloSD::CaloSD(const std::string& name,
                const SensitiveDetectorCatalog& clg,

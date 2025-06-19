@@ -25,6 +25,10 @@
 // particle gun prototypes
 //
 
+//added
+#include "IOMC/ParticleGuns/interface/FlatEtaRangeGunProducer.h"
+//added
+
 using edm::BeamMomentumGunProducer;
 DEFINE_FWK_MODULE(BeamMomentumGunProducer);
 using edm::CloseByParticleGunProducer;
@@ -61,3 +65,7 @@ using edm::RandomMultiParticlePGunProducer;
 DEFINE_FWK_MODULE(RandomMultiParticlePGunProducer);
 using edm::RandomXiThetaGunProducer;
 DEFINE_FWK_MODULE(RandomXiThetaGunProducer);
+//added
+using edm::FlatEtaRangeGunProducer;
+DEFINE_FWK_MODULE(FlatEtaRangeGunProducer);
+//added

@@ -1,23 +1,27 @@
-__init__.py
+# Individual files in src root - ignore all
+*.root
+*.py
+*.cc
+*.log
+*.json
+
+# CMSSW build artifacts
+lib/
+bin/
+test/
+tmp/
 *.pyc
-.*.swp
-.#*
-#*#
+*.so
+*.o
+*.a
+.SCRAM/
+.scramrc/
+BigProducts/
+cfipython/
+python/
+
+# General patterns
 *~
-*.pb
-
-# ignore partially applied patches and their backup
-*.rej
-*.orig
-
-
-# ignore files under the top level $CMSSW_BASE/src directory, but not its subdirectories
-/*
-!/*/
-
-# ignore some IDE related files
-*.xcodeproj
-.vscode
-
-#ignore mac specific file
-.DS_Store
+*.bak
+*.swp
+*.tmp

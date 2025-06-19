@@ -33,9 +33,9 @@ genParticleTable = simpleGenParticleFlatTableProducer.clone(
     src = cms.InputTag("finalGenParticles"),
     name= cms.string("GenPart"),
     doc = cms.string("interesting gen particles "),
-    externalVariables = cms.PSet(
-        iso = ExtVar(cms.InputTag("genIso"), float, precision=8, doc="Isolation for leptons"),
-    ),
+    #externalVariables = cms.PSet(
+    #    iso = ExtVar(cms.InputTag("genIso"), float, precision=8, doc="Isolation for leptons"),
+    #),
     variables = cms.PSet(
          pt  = Var("pt",  float, precision=8),
          phi = Var("phi", float,precision=8),
@@ -80,11 +80,11 @@ genParticleTable = simpleGenParticleFlatTableProducer.clone(
     )
 )
 
-genIso = cms.EDProducer("GenPartIsoProducer",
-                       genPart=cms.InputTag("finalGenParticles"),
-                       packedGenPart=cms.InputTag("packedGenParticles"),
-                       additionalPdgId=cms.int32(22),
-        )
+#genIso = cms.EDProducer("GenPartIsoProducer",
+#                       genPart=cms.InputTag("finalGenParticles"),
+#                       packedGenPart=cms.InputTag("packedGenParticles"),
+#                       additionalPdgId=cms.int32(22),
+#        )
 
-genParticleTask = cms.Task(finalGenParticles, genIso)
+genParticleTask = cms.Task(finalGenParticles) #, genIso)
 genParticleTablesTask = cms.Task(genParticleTable)

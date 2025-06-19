@@ -56,7 +56,7 @@ typedef EventSingletonSimpleFlatTableProducer<reco::BeamSpot> SimpleBeamspotFlat
 #include "FWCore/Framework/interface/MakerMacros.h"
 DEFINE_FWK_MODULE(SimpleCandidateFlatTableProducer);
 DEFINE_FWK_MODULE(SimpleCandidateCollectionFlatTableProducer);
-DEFINE_FWK_MODULE(SimpleTrackFlatTableProducer);
+// DEFINE_FWK_MODULE(SimpleTrackFlatTableProducer);
 DEFINE_FWK_MODULE(SimpleSuperclusterFlatTableProducer);
 DEFINE_FWK_MODULE(SimplePFJetFlatTableProducer);
 DEFINE_FWK_MODULE(SimpleGenJetFlatTableProducer);
